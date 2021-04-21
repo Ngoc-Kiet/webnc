@@ -1,0 +1,48 @@
+.header.--News {
+  nav {
+    ul {
+      li {
+        color: white;
+        a {
+          color: white;
+        }
+      }
+    }
+  }
+}
+.menuburger.--News {
+  top: 28%;
+  transform: initial;
+}
+
+.Newswork {
+  padding-top: 100px;
+  padding-bottom: 80px;
+
+  h3 {
+    @include text(32px, ebb, none, blue, upperCase);
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  p {
+    font-size: 22px;
+    font-family: A;
+    line-height: 2;
+  }
+  .NewDetail {
+    display: flex;
+    a {
+      text-decoration: none;
+    }
+    .date {
+      top: 10%;
+      @include text(20px, none, none, red, none);
+      font-style: italic;
+      padding-left: 2px;
+    }
+    .room {
+      top: 10%;
+      @include text(20px, none, none, red, none);
+    }
+  }
+}

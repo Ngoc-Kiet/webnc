@@ -1,0 +1,357 @@
+// SCSS HOMEPAGE
+
+.header.--home {
+  position: absolute;
+}
+
+#app {
+  padding-top: 100px;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 80%;
+  @media (max-width: 810px) {
+    width: initial;
+  }
+  @media (max-width: 768px) {
+    width: initial;
+  }
+}
+
+#left {
+  float: left;
+  background-color: white;
+  width: 200px;
+  height: 100vh;
+  border-right: 2px solid red;
+  z-index: 2;
+}
+
+#user-header {
+  height: 45px;
+  background-color: white;
+  width: 100%;
+}
+
+.logo {
+  padding-top: 4px;
+  padding-left: 15px;
+  line-height: 35px;
+  font-size: 1rem;
+  color: red;
+  span {
+    margin-left: 15px;
+    font-weight: 300;
+    vertical-align: middle;
+  }
+  img {
+    vertical-align: middle;
+  }
+  .fa {
+    margin-top: 3px;
+    font-size: 0.8rem;
+    margin-left: 45px;
+    vertical-align: middle;
+  }
+}
+#menu {
+  a {
+    display: block;
+    text-decoration: none;
+    color: red;
+    height: 35px;
+    padding-left: 15px;
+    margin-top: 5px;
+    font-weight: 300;
+  }
+  #heading {
+    color: darken(red, 20%);
+    font-weight: 600;
+    text-transform: uppercase;
+    padding-top: 20px;
+    margin-bottom: 15px;
+  }
+  #child {
+    margin-left: 5px;
+    line-height: 30px;
+    span {
+      margin-right: 5px;
+      img {
+        position: relative;
+        top: 4px;
+        border-radius: 3px;
+      }
+      .fa {
+        position: relative;
+        top: 1px;
+        height: 20px;
+        width: 20px;
+        text-align: center;
+        color: red;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+.create-post-textbox {
+  width: 670px;
+  height: 80px;
+  background-color: white;
+  margin-left: 60px;
+  margin-top: 30px;
+  margin-bottom: 60px;
+  @media (max-width: 510px) {
+    width: inherit;
+  }
+  img {
+    border-radius: 50%;
+    border: 0px solid white;
+    margin-left: -10px;
+    margin-top: -8px;
+  }
+  .status {
+    border-radius: 10px;
+    box-sizing: border-box;
+    resize: none;
+    border: 1px solid snow;
+    padding-left: 230px;
+    margin-top: 30px;
+    color: lighten(red, 30%);
+  }
+}
+
+.actions {
+  float: right;
+  margin-top: 60px;
+  margin-right: 15px;
+  color: red;
+  transition: 0.3s;
+  cursor: pointer;
+  @media (max-width: 497px) {
+    margin-top: inherit;
+    margin-bottom: 20px;
+  }
+  i {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: white;
+
+    text-align: center;
+    padding-top: 12px;
+    transition: all 0.1s ease-in-out;
+  }
+  i:hover {
+    color: blue;
+    transform: scale(1.1);
+  }
+  .post1 {
+    @include linear-Gradient($blueLight, $blue);
+    padding-right: 3px;
+    color: white;
+  }
+  .post1:hover {
+    color: blue;
+    @include linear-Gradient(#fff, #fff);
+  }
+}
+
+.post-img {
+  display: block;
+  width: 670px;
+  height: 250px;
+  background-color: $greyUI;
+  border-radius: 7px;
+  margin: 30px 0 0 60px;
+  @media (max-width: 768px) {
+    width: inherit;
+    height: inherit;
+    background-color: inherit;
+  }
+
+  img {
+    border-radius: 5px;
+    @include post-img-shadow();
+  }
+}
+
+.post-content {
+  width: 660px;
+  height: auto;
+  background-color: $greyUI;
+  font-size: 1rem;
+  margin-left: 65px;
+  padding-top: 25px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-bottom-right-radius: 7px;
+  border-bottom-left-radius: 7px;
+  color: darken(red, 20%);
+  @media (max-width: 768px) {
+    width: inherit;
+    height: inherit;
+  }
+  h1 {
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-size: 1.3rem;
+  }
+  p {
+    margin-bottom: 15px;
+    font-weight: 300;
+  }
+}
+
+.like-box {
+  height: 50px;
+  border-top: 2px solid lighten(red, 45%);
+  border-bottom: 2px solid lighten(red, 45%);
+  line-height: 55px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+
+  span {
+    img {
+      height: 22px;
+      width: 22px;
+      margin-right: -7px;
+      border: 2px solid $greyUI;
+      border-radius: 50%;
+    }
+  }
+}
+
+.reaction-counter {
+  position: absolute;
+  margin-left: 15px;
+  line-height: 50px;
+  margin-top: -3px;
+  font-size: 0.9rem;
+  color: red;
+}
+
+.comment-counter {
+  position: absolute;
+  margin-left: 425px;
+  line-height: 50px;
+  margin-top: -3px;
+  font-size: 0.9rem;
+  color: red;
+  @media (max-width: 812px) {
+    margin-left: 300px;
+  }
+  @media (max-width: 745px) {
+    margin-left: 200px;
+    // position: inherit;
+  }
+  @media (max-width: 510px) {
+    position: inherit;
+  }
+}
+
+.post-comment-wrapper {
+  min-height: 50px;
+  font-weight: 200;
+  width: 500px;
+}
+
+#comment {
+  margin-top: 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+input {
+  background: transparent;
+  padding: 0px 10px 0px 10px;
+  border: 0;
+  outline: 0;
+  height: 30px;
+  font-size: 0.9rem;
+  color: red;
+  width: 450px;
+  border-radius: 15px;
+  cursor: pointer;
+  @include box-shadow-down();
+  @media (max-width: 663px) {
+    width: 300px;
+    height: 30px;
+  }
+  &::placeholder {
+    color: lighten(red, 30%);
+    font-weight: 100;
+    letter-spacing: 1px;
+    padding-left: 10px;
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+}
+//Thông báo
+.menuburger1 {
+  position: absolute;
+  top: 10%;
+  left: 60%;
+  width: 25%;
+
+  padding: 22px 0;
+  transition: 0.3s;
+  cursor: pointer;
+  animation: fadeIn 10s;
+  -webkit-animation: fadeIn 10s;
+  -moz-animation: fadeIn 10s;
+  -o-animation: fadeIn 10s;
+  -ms-animation: fadeIn 10s;
+
+  @include md {
+    display: none;
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @-moz-keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @-o-keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @-ms-keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
